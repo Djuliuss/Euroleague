@@ -1,4 +1,5 @@
 // TypeScript version of the game
+import { readUserInput } from "./file";
 
 // Define Player interface
 interface Player {
@@ -31,29 +32,26 @@ const players: Player[] = [
 ];
 
 let streak: number = 0; // Streak counter
-let currentPlayerIndex: number = 0; // Current player index
+let streakTarget: number = 25; // Current player index
 
 function startGame(): void {
   console.log("Game started! Type 'guess(teamNumber)' to play.");
   askNextPlayer();
 }
 
-function askNextPlayer(): void {
-  if (currentPlayerIndex < players.length) {
-    console.log(`Player: ${players[currentPlayerIndex].name}`);
+async function askNextPlayer(): Promise<void> {
+  if (streak < streakTarget) {
+    const randomNumber = Math.floor(Math.random() * players.length);
+    const randomPlayer = players[randomNumber];
+    const readGuess = await readUserInput(`Player: ${randomPlayer.name}\n`);
+    validateGuess(Number(readGuess), randomPlayer.team);
   } else {
     console.log("Game over! You guessed all players. Your final streak: " + streak);
   }
 }
 
-function guess(team: number): void {
-  if (currentPlayerIndex >= players.length) {
-    console.log("Game over! Restart to play again.");
-    return;
-  }
-
-  const currentPlayer: Player = players[currentPlayerIndex];
-  if (team === currentPlayer.team) {
+function validateGuess(team: number, guessNumber: number): void {
+  if (team === guessNumber) {
     streak++;
     console.log("CORRECT! Current Streak: " + streak);
   } else {
@@ -61,7 +59,6 @@ function guess(team: number): void {
     console.log("INCORRECT! Streak reset to 0.");
   }
 
-  currentPlayerIndex++;
   askNextPlayer();
 }
 
