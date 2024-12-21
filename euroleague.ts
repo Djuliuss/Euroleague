@@ -1,6 +1,7 @@
 // TypeScript version of the game
 import { readUserInput } from "./file";
 import { players } from "./data";
+import { validateReset } from "./utils";
 
 let streak: number = 0; // Streak counter
 let streakTarget: number = 200;
@@ -14,7 +15,14 @@ async function askNextPlayer(): Promise<void> {
     const randomNumber = Math.floor(Math.random() * players.length);
     const randomPlayer = players[randomNumber];
     const readGuess = await readUserInput(`Player: ${randomPlayer.name}\n`);
-    validateGuess(randomPlayer.team, Number(readGuess));
+    const { isReset, newValueStreak } = validateReset(readGuess);
+    if (isReset) {
+      streak = Number(newValueStreak);
+      console.log(`Resetting streak to ${streak}`);
+    } else {
+      validateGuess(randomPlayer.team, Number(readGuess));
+    }
+    askNextPlayer();
   } else {
     console.log("Game over! You guessed all players. Your final streak: " + streak);
   }
@@ -28,8 +36,6 @@ function validateGuess(team: number, guessNumber: number): void {
     streak = 0;
     console.log(`INCORRECT! Streak reset to 0. The right answer was ${team}`);
   }
-
-  askNextPlayer();
 }
 
 // Start the game by calling startGame()
