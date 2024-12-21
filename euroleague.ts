@@ -3,7 +3,7 @@ import { readUserInput } from "./file";
 import { players } from "./data";
 
 let streak: number = 0; // Streak counter
-let streakTarget: number = 100; // Current player index
+let streakTarget: number = 200;
 
 function startGame(): void {
   askNextPlayer();
