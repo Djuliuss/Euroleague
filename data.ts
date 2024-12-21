@@ -4,6 +4,14 @@ export interface Player {
   team: number;
 }
 
+// teams
+
+// 1 - Monaco
+// 2 - Olympiacos
+// 3 - Red Star
+// 4 - Zalgiris
+// 5 - Fenerbaće
+
 export const players: Player[] = [
   { name: "MIKE JAMES", team: 1 },
   { name: "ALPHA DIALLO", team: 1 },
@@ -45,4 +53,14 @@ export const players: Player[] = [
   { name: "BRYANT DUNSTON", team: 4 },
   { name: "IGNAS BRAZDEIKIS", team: 4 },
   { name: "LAURYNAS BIRUTIS", team: 4 },
+  { name: "NIGEL HAYES-DAVIS", team: 5 },
+  { name: "WADE BALDWIN IV", team: 5 },
+  { name: "DEVON HALL", team: 5 },
+  { name: "BONZIE COLSON", team: 5 },
+  { name: "TARIK BIBEROVIC", team: 5 },
+  { name: "MARKO GUDURIC", team: 5 },
+  { name: "NICOLO MELLI", team: 5 },
+  { name: "ARTURS ZAGARS", team: 5 },
+  { name: "KHEM BIRCH", team: 5 },
+  { name: "SERTAC SANLI", team: 5 },
 ];

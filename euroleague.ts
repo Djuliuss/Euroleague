@@ -2,13 +2,6 @@
 import { readUserInput } from "./file";
 import { players } from "./data";
 
-// Player data
-
-// 1 - Monaco
-// 2 - Olympiacos
-// 3 - Red Star
-// 4 - Zalgiris
-
 let streak: number = 0; // Streak counter
 let streakTarget: number = 100; // Current player index
 
