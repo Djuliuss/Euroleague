@@ -12,6 +12,7 @@ export interface Player {
 // 4 - Zalgiris
 // 5 - Fenerbaće
 // 6 - Bayern Munich
+// 7 - Paris
 
 export const players: Player[] = [
   { name: "MIKE JAMES", team: 1 },
@@ -74,4 +75,14 @@ export const players: Player[] = [
   { name: "DANKO BRANKOVIC", team: 6 },
   { name: "IVAN KHARCHENKOV", team: 6 },
   { name: "ELIAS HARRIS", team: 6 },
+  { name: "COLLIN MALCOLM", team: 7 },
+  { name: "NADIR HIFI", team: 7 },
+  { name: "TYSON WARD", team: 7 },
+  { name: "LEOPOLD CAVALIERE", team: 7 },
+  { name: "KEVARRIUS HAYES", team: 7 },
+  { name: "MIKAEL JANTUNEN", team: 7 },
+  { name: "TJ SHORTS", team: 7 },
+  { name: "BANDJA SY", team: 7 },
+  { name: "MAODO LO", team: 7 },
+  { name: "YAKUBA OUATTARA", team: 7 },
 ];
