@@ -13,6 +13,8 @@ export interface Player {
 // 5 - Fenerbaće
 // 6 - Bayern Munich
 // 7 - Paris
+// 8 - Efes
+// 9 - Panathinaikos
 
 export const players: Player[] = [
   { name: "MIKE JAMES", team: 1 },
@@ -45,16 +47,16 @@ export const players: Player[] = [
   { name: "ISAIAH CANAAN", team: 3 },
   { name: "MIKE DAUM", team: 3 },
   { name: "DEJAN DAVIDOVAC", team: 3 },
-  { name: "DOVYDAS GIEDRAITIS", team: 4 },
+  { name: "DOVYDAS GIEDRAITIS", team: 4 }, //
   { name: "LONNIE WALKER IV", team: 4 },
-  { name: "EDGARAS ULANOVAS", team: 4 },
+  { name: "EDGARAS ULANOVAS", team: 4 }, //
   { name: "SYLVAIN FRANCISCO", team: 4 },
   { name: "ARNAS BUTKEVICIUS", team: 4 },
   { name: "MATTHEW MITCHELL", team: 4 },
-  { name: "DEIVIDAS SIRVYDIS", team: 4 },
+  { name: "DEIVIDAS SIRVYDIS", team: 4 }, //
   { name: "BRYANT DUNSTON", team: 4 },
-  { name: "IGNAS BRAZDEIKIS", team: 4 },
-  { name: "LAURYNAS BIRUTIS", team: 4 },
+  { name: "IGNAS BRAZDEIKIS", team: 4 }, //
+  { name: "LAURYNAS BIRUTIS", team: 4 }, //
   { name: "NIGEL HAYES-DAVIS", team: 5 },
   { name: "WADE BALDWIN IV", team: 5 },
   { name: "DEVON HALL", team: 5 },
@@ -95,4 +97,14 @@ export const players: Player[] = [
   { name: "ELIJAH BRYANT", team: 8 },
   { name: "DAN OTURU", team: 8 },
   { name: "STANLEY JOHNSON", team: 8 },
+  { name: "KOSTAS SLOUKAS", team: 9 },
+  { name: "JERIAN GRANT", team: 9 },
+  { name: "MATHIAS LESSORT", team: 9 },
+  { name: "JUANCHO HERNANGOMEZ", team: 9 },
+  { name: "LORENZO BROWN", team: 9 },
+  { name: "CEDI OSMAN", team: 9 },
+  { name: "KENDRICK NUNN", team: 9 },
+  { name: "KONSTANTINOS MITOGLOU", team: 9 },
+  { name: "OMER YURTSEVEN", team: 9 },
+  { name: "PANAGIOTIS KALAITZAKIS", team: 9 },
 ];
