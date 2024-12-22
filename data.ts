@@ -11,6 +11,7 @@ export interface Player {
 // 3 - Red Star
 // 4 - Zalgiris
 // 5 - Fenerbaće
+// 6 - Bayern Munich
 
 export const players: Player[] = [
   { name: "MIKE JAMES", team: 1 },
@@ -63,4 +64,14 @@ export const players: Player[] = [
   { name: "ARTURS ZAGARS", team: 5 },
   { name: "KHEM BIRCH", team: 5 },
   { name: "SERTAC SANLI", team: 5 },
+  { name: "NICK WEILER-BABB", team: 6 },
+  { name: "CARSEN EDWARDS", team: 6 },
+  { name: "JOHANNES VOIGTMANN", team: 6 },
+  { name: "SHABAZZ NAPIER", team: 6 },
+  { name: "ANDREAS OBST", team: 6 },
+  { name: "DEVIN BOOKER", team: 6 },
+  { name: "OSCAR DA SILVA", team: 6 },
+  { name: "DANKO BRANKOVIC", team: 6 },
+  { name: "IVAN KHARCHENKOV", team: 6 },
+  { name: "ELIAS HARRIS", team: 6 },
 ];
