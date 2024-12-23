@@ -4,14 +4,10 @@ import { players } from "./data";
 import { validateReset } from "./utils";
 
 let streak: number = 0; // Streak counter
-let streakTarget: number = 200;
+const streakTarget: number = 250;
 
-function startGame(): void {
-  askNextPlayer();
-}
-
-async function askNextPlayer(): Promise<void> {
-  if (streak < streakTarget) {
+async function playGame(): Promise<void> {
+  while (streak < streakTarget) {
     const randomNumber = Math.floor(Math.random() * players.length);
     const randomPlayer = players[randomNumber];
     const readGuess = await readUserInput(`Player: ${randomPlayer.name}\n`);
@@ -22,10 +18,8 @@ async function askNextPlayer(): Promise<void> {
     } else {
       validateGuess(randomPlayer.team, Number(readGuess));
     }
-    askNextPlayer();
-  } else {
-    console.log("Game over! You guessed all players. Your final streak: " + streak);
   }
+  console.log("Game over! You guessed all players. Your final streak: " + streak);
 }
 
 function validateGuess(team: number, guessNumber: number): void {
@@ -39,4 +33,6 @@ function validateGuess(team: number, guessNumber: number): void {
 }
 
 // Start the game by calling startGame()
-startGame();
+(async () => {
+  await playGame();
+})();
