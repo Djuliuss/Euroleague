@@ -13,6 +13,7 @@ async function playGame(): Promise<void> {
     if (isReset) {
       console.log(`Removing from back of the pile`);
       myPlayers.pop();
+      myPlayers.unshift(randomPlayer);
     } else {
       if (Number(randomPlayer.team) === Number(readGuess)) {
         console.log("CORRECT!");
