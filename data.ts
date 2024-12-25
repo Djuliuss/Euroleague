@@ -18,6 +18,8 @@ export interface Player {
 // 10 - Emporio Armani
 // 11 - Partizan
 // 12 - Macabbi
+// 13 - ASVEL
+// 14 - Virtus
 
 export const players: Player[] = [
   { name: "MIKE JAMES", team: 1 },
@@ -140,4 +142,24 @@ export const players: Player[] = [
   { name: "JASIEL RIVERO", team: 12 },
   { name: "TAMIR BLATT", team: 12 },
   { name: "DAVID DeJULIUS", team: 12 },
+  { name: "THEO MALEDON", team: 13 },
+  { name: "PARIS LEE", team: 13 },
+  { name: "JOFFREY LAUVERGNE", team: 13 },
+  { name: "ANDRE ROBERSON", team: 13 },
+  { name: "NEAL SAKO", team: 13 },
+  { name: "DAVID LIGHTY", team: 13 },
+  { name: "NANDO DE COLO", team: 13 },
+  { name: "MBAYE NDIAYE", team: 13 },
+  { name: "EDWIN JACKSON", team: 13 },
+  { name: "SHAQUILLE HARRISON", team: 13 },
+  { name: "ISAIA CORDINIER", team: 14 },
+  { name: "WILL CLYBURN", team: 14 },
+  { name: "MATTHEW MORGAN", team: 14 },
+  { name: "ACHILLE POLONARA", team: 14 },
+  { name: "MOUHAMET DIOUF", team: 14 },
+  { name: "MARCO BELINELLI", team: 14 },
+  { name: "ANTE ZIZIC", team: 14 },
+  { name: "TORNIKE SHENGELIA", team: 14 },
+  { name: "DANIEL HACKETT", team: 14 },
+  { name: "ALESSANDRO PAJOLA", team: 14 },
 ];
