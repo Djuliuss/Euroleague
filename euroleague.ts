@@ -8,6 +8,9 @@ async function playGame(): Promise<void> {
   while (myPlayers.length > 0) {
     console.info(`${myPlayers.length} to go`);
     const randomPlayer = myPlayers.shift() as Player;
+    if (randomPlayer.isRepeat) {
+      console.info(`REPEAT!`);
+    }
     const readGuess = await readUserInput(`Player: ${randomPlayer.name}\n`);
     const isReset = readGuess.toUpperCase() === "R";
     if (isReset) {
@@ -19,7 +22,7 @@ async function playGame(): Promise<void> {
         console.log("CORRECT!");
       } else {
         console.log(`INCORRECT! Pushing back to the pile. The correct answer was ${randomPlayer.team}`);
-        myPlayers.push(randomPlayer!);
+        myPlayers.push({ ...randomPlayer, isRepeat: true });
       }
     }
   }
