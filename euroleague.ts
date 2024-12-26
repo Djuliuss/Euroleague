@@ -37,5 +37,5 @@ async function playGame(): Promise<void> {
   const totalSeconds = Math.floor(timeTakenMs / 1000); // Convert to seconds
   const minutes = Math.floor(totalSeconds / 60); // Calculate full minutes
   const seconds = totalSeconds % 60; // Remaining seconds
-  console.log(`Execution time: ${minutes} minutes and ${seconds} seconds}`);
+  console.log(`Execution time: ${minutes} minutes and ${seconds} seconds`);
 })();
