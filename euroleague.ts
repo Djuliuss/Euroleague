@@ -26,7 +26,13 @@ async function playGame(): Promise<void> {
   console.log("Game over! You guessed all players");
 }
 
-// Start the game by calling startGame()
 (async () => {
+  const startTime = performance.now(); // Start the timer
   await playGame();
+  const endTime = performance.now(); // End the timer
+  const timeTakenMs = endTime - startTime; // Time in milliseconds
+  const totalSeconds = Math.floor(timeTakenMs / 1000); // Convert to seconds
+  const minutes = Math.floor(totalSeconds / 60); // Calculate full minutes
+  const seconds = totalSeconds % 60; // Remaining seconds
+  console.log(`Execution time: ${minutes} minutes and ${seconds} seconds}`);
 })();
